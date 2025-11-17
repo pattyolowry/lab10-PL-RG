@@ -20,21 +20,23 @@ def hypotenuse(a, b):
 def add(a, b):
     return a + b
 
-def subtract(a, b):
-    return a - b
-
-def multiply(a, b):
+def mul(a, b):
     return a * b
 
-def divide(a, b):
+def div(a, b):
+    # b / a  (yes — the assignment wants it in this order)
     if a == 0:
-        raise ZeroDivisionError
+        raise ZeroDivisionError("Cannot divide by zero: a is 0.")
     return b / a
+
+def exp(a, b):
+    # a^b
+    return a ** b
+
+def subtract(a, b):
+    return a - b
 
 def logarithm(a, b):
     if a == 0 or b == 0:
         raise ValueError
     return math.log(b, a)
-
-def exponent(a, b):
-    return a ** b
